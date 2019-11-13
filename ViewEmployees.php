@@ -1,7 +1,41 @@
 <html>
 <body>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: red;
+}
 
+li {
+  float: left;
+}
 
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: green;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">Employee Login</a></li>
+  <li><a href="#contact">View ArtWorks</a></li>
+  <li><a href="#about">View Events</a></li>
+</ul>
+
+<br></br>
 
 <?php
  
@@ -17,6 +51,7 @@ $listOfAllEmployee = mysqli_query($conn, $getAllEmployee);
 if (mysqli_num_rows($listOfAllEmployee) > 0) {
     while($row = mysqli_fetch_assoc($listOfAllEmployee)) {
         echo "empId: " . $row["empId"]."<br>". "last_name: " . $row["last_name"]."<br>". "First Name:  ". $row["first_name"] ."<br>". "Phone Number:  ". $row["phone_number"]. "<br>";
+        echo "<br>";
     }
 } else {
     echo "0 results";
