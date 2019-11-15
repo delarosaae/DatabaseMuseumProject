@@ -52,8 +52,8 @@ create table Wing(
 create table ArtPiece(
 	artId Integer(4) not null unique,
     artMedium varchar(20) not null,
-	artistId Integer(4) not null unique,
-	wingId Integer(2) not null unique,
+	artistId Integer(4) not null,
+	wingId Integer(2) not null,
     title varchar(20) not null,
     primary key(artistId),
     foreign key(wingId) references Wing(wingId), 
@@ -76,3 +76,16 @@ create table Guest(
     status tinyint(1) not null, 
     primary key(guestId)
 );
+
+INSERT INTO Employee (empId, last_name, first_name, phone_number) VALUES (1, 'Smith', 'John', '8043334421');
+INSERT INTO Housekeeper (empId, hours, pay_rate) VALUES (1, 40, 14.00);
+INSERT INTO Housekeeper (empId, hours, pay_rate) VALUES (2, 30, 15.00);
+INSERT INTO Curator (empId, salary) VALUES (3, 60000); 
+INSERT INTO Security (empId, salary, Shift) VALUES (4, 40000, 'Night'); 
+INSERT INTO Employee (empId, last_name, first_name, phone_number) VALUES (5, 'Howard', 'Dwight', '5159901234');
+INSERT INTO Security (empId, salary, Shift) VALUES (5, 50000, 'Night'); 
+
+
+insert into Event values(1, 'Cancer Fundraiser', 2, 1);
+insert into Event values(2, 'Bob Wedding', 3, 0);
+insert into Event values(3, 'Special Display', 4, 1);
