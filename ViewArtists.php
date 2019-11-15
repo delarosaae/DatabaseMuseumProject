@@ -29,7 +29,7 @@ li a:hover {
 <body>
 
 <ul>
-  <li><a class="active" href="">Home</a></li>
+  <li><a class="active" href="MuseumMainPage.php">Home</a></li>
   <li><a href="AddEmployee.php">Employee Login</a></li>
   <li><a href="#contact">View ArtWorks</a></li>
   <li><a href="#about">View Events</a></li>

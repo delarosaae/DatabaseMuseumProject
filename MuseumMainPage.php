@@ -29,7 +29,6 @@ body  {
   background-image: url("GardenSainteAdresse.jpg");
   background-size: cover;
   opacity: .6;
-  
 }
 
 li.moveRight{

@@ -51,10 +51,10 @@ create table Wing(
 
 create table ArtPiece(
 	artId Integer(4) not null unique,
-    artMedium varchar(20) not null,
+    artMedium varchar(30) not null,
 	artistId Integer(4) not null,
 	wingId Integer(2) not null,
-    title varchar(20) not null,
+    title varchar(30) not null,
     primary key(artistId),
     foreign key(wingId) references Wing(wingId), 
 	foreign key(artistId) references Artist(artistId)
@@ -63,7 +63,7 @@ create table ArtPiece(
 create table Event(
 	eventId Integer(3) not null unique,
     event_Title varchar(20) not null,
-    wingId Integer(3) not null, 
+    wingId Integer(3) not null,
     public TinyInt(1) not null, 
     primary key(eventId)
 );
@@ -89,3 +89,19 @@ INSERT INTO Security (empId, salary, Shift) VALUES (5, 50000, 'Night');
 insert into Event values(1, 'Cancer Fundraiser', 2, 1);
 insert into Event values(2, 'Bob Wedding', 3, 0);
 insert into Event values(3, 'Special Display', 4, 1);
+insert into Artist values (1, 'Da Vinci', 'Leonardo', 'Italian', 'Painter');
+insert into Artist values (2, 'Van Gogh', 'Vincent', 'Dutch', 'Painter');
+insert into Artist values (3, 'Picasso', 'Pablo', 'Spanish', 'Painter');
+insert into Artist values (4, 'Rodin', 'Auguste', 'French', 'Sculptor');
+insert into Wing values(1, 'Eastern Art', 1, 50);
+insert into Wing values(2, 'American Art', 1, 100);
+insert into Wing values(3, 'European Art', 2, 75);
+insert into Wing values(4, 'African Art', 0, 50); 
+
+insert into ArtPiece values(1, "Les Femmes d'Alger", 3, 1, 'Oil On Canvas');
+insert into ArtPiece values(2, "Portrait of Dr. Gachet", 2, 3, 'Oil On Canvas');
+insert into ArtPiece values(3, "Mona Lisa", 1, 4, 'Oil On Canvas');
+insert into ArtPiece values(4, "The Walking Man", 4, 2, 'Bronze Sculpture');
+insert into Guest values(1, 'Smith', 'Joe', 'smith@email.com', 1);
+insert into Guest values(2, 'Jones', 'Bob', 'jones@email.com', 0);
+insert into Guest values(3, 'White', 'Bill', 'white@email.com', 0);

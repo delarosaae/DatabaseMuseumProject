@@ -25,17 +25,14 @@ li a:hover {
   background-color: black;
 }
 </style>
-</head>
 <body>
 
 <ul>
-  <li><a href="MuseumMainPage.php">Home</a></li>
+  <li><a class="active" href="MuseumMainPage.php">Home</a></li>
   <li><a href="AddEmployee.php">Employee Login</a></li>
   <li><a href="#contact">View ArtWorks</a></li>
   <li><a href="#about">View Events</a></li>
 </ul>
-
-<br></br>
 
 <?php
  
@@ -45,29 +42,31 @@ $password = "Museum508Database";
 $dbname = "DatabaseProject";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$employee = $_POST["empId"];
-$employee = stripslashes($employee);
-$lastName = $_POST["lastname"];
-$lastName = stripslashes($lastName);
+echo($_POST["firstname"]);
+
+$firstNameToAdd = $_POST["firstname"];
+$firstNameToAdd = stripslashes($firstNameToAdd);
+
+$lastNameToAdd = $_POST["lastname"];
+$lastNameToAdd = stripslashes($lastNameToAdd);
+
+$phoneNumberToAdd = $_POST["phoneNumber"];
+$phoneNumberToAdd = stripslashes($phoneNumberToAdd);
 
 
-$selectQuery = "select empId, last_name from Employee where empId = '$employee' and last_name = '$lastName'";
+$insertEmployee = "insert into Employee (last_name, first_name, phone_number) values ('$lastNameToAdd', '$firstNameToAdd', '$phoneNumberToAdd')";
 
-$result = mysqli_query($conn, $selectQuery);
-$row = mysqli_fetch_assoc($result);
-
-
-if (($row["empId"] == $employee) && ($row["last_name"] == $lastName)) 
+if (mysqli_query($conn, $insertEmployee))
 {
-    echo "Employee logged in " . $row["last_name"];
-    header("Location: ./EmployeeScreen.php");
-} else {
-    header("Location: ./MuseumMainPage.php");
+    echo "Added Employee to Database";
 }
-
+else{
+    echo "could not add employee to database";
+}
+mysqli_close($conn);
 
 
 ?>
-</body>
 
+</body>
 </html> 
