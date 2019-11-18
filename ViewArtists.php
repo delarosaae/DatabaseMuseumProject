@@ -6,7 +6,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: white;
+  background-color: #333;
 }
 
 li {
@@ -15,14 +15,14 @@ li {
 
 li a {
   display: block;
-  color: red;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: black;
+  background-color: #111;
 }
 </style>
 </head>
@@ -48,13 +48,19 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 $viewArtist = "Select * from Artist";
 $artistList = mysqli_query($conn, $viewArtist);
 
+
 if (mysqli_num_rows($artistList) > 0) {
     while($row = mysqli_fetch_assoc($artistList)) {
         
+       echo "Artist Id: " . $row["artistId"] ."<br>" . "last_name: " . $row["last_name"] ."<br>" . "First Name:  " . $row["first_name"] ."<br>". "Nationality:  ". $row["nationality"]. "<br>"."Specility: " . $row["specility"] ."<br>";
+
+        echo "<br>";
     }
+
 } else {
     echo "0 results";
 }
+
 
 mysqli_close($conn);
 
