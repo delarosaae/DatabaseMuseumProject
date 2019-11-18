@@ -1,28 +1,57 @@
 <html>
 <body>
 <style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.navbar {
   overflow: hidden;
-  background-color: white;
+  background-color: #000000;
+ 
+}
+.og{
+    
+     float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+  margin-top: 45px;
 }
 
-li.left {
+.og1{
+    
+     float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+  margin-top: 45px;
+
+  margin-left: 850px;
+}
+
+.navbar a {
   float: left;
-}
-
-li a {
-  display: block;
-  color: red;
+  font-size: 16px;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  
+ 
+}
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 80px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 0px;    
 }
 
-li a:hover {
-  background-color: black;
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #c88f57;
 }
 
 body  {
@@ -38,13 +67,35 @@ li.moveRight{
 </head>
 <body>
 
-<ul>
-  <li class="left"><a class="active" href="MuseumMainPage.php">Home</a></li>
-  <li class="left"><a href="ViewEvents.php">Events</a></li>
-  <li class="left"><a href="ViewArtWorks.php">Artworks</a></li>
-  <li class="left"><a href="ViewArtists.php">Artists</a></li>
-  <li class="moveRight"><a href="EmployeeLogin.php">Employees</a></li>
-</ul>
+
+<div class="navbar">
+
+<img class="logo" src="logo.png" align="left">
+
+<div>
+  <a class="og" href="MuseumMainPage.php">Home</a>
+</div>
+
+<div>
+  <a class="og" href="ViewArtWorks.php">Artworks</a>
+</div>
+
+<div>
+  <a class="og" href="ViewEvents.php">Events</a>
+</div>
+
+<div>
+  <a class="og" href="ViewArtists.php">Artists</a>
+</div>
+
+<div>
+<a class="og1" href="EmployeeLogin.php">Employees</a>
+</div>
+
+
+</div>
+
+
 
 <br></br>
 <h1 align="center">508 Database Museum</h1>

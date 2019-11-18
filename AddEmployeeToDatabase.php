@@ -1,38 +1,69 @@
 <html>
 <body>
 <style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.navbar {
   overflow: hidden;
-  background-color: white;
+  background-color: #000000;
+ 
+}
+.og{
+    
+     float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+  margin-top: 45px;
 }
 
-li {
+.navbar a {
   float: left;
-}
-
-li a {
-  display: block;
-  color: red;
+  font-size: 16px;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  
+ 
+}
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 80px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 0px;    
 }
 
-li a:hover {
-  background-color: black;
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #c88f57;
 }
 </style>
 <body>
 
-<ul>
-  <li><a class="active" href="MuseumMainPage.php">Home</a></li>
-  <li><a href="AddEmployee.php">Employee Login</a></li>
-  <li><a href="#contact">View ArtWorks</a></li>
-  <li><a href="#about">View Events</a></li>
-</ul>
+<div class="navbar">
+
+<img class="logo" src="logo.png" align="left">
+
+<div>
+  <a class="og" href="MuseumMainPage.php">Home</a>
+</div>
+
+<div>
+<a class="og" href="AddEmployee.php">Employee Login</a>
+</div>
+
+<div>
+  <a class="og" href="#contact">View ArtWorks</a>
+</div>
+
+<div>
+  <a class="og" href="#about">View Events</a>
+</div>
+
+</div>
 
 <?php
  
@@ -58,10 +89,10 @@ $insertEmployee = "insert into Employee (last_name, first_name, phone_number) va
 
 if (mysqli_query($conn, $insertEmployee))
 {
-    echo "Added Employee to Database";
+    echo " Added Employee to Database";
 }
 else{
-    echo "could not add employee to database";
+    echo " could not add employee to database";
 }
 mysqli_close($conn);
 
