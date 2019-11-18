@@ -25,7 +25,6 @@ li a:hover {
   background-color: black;
 }
 </style>
-</head>
 <body>
 
 <ul>

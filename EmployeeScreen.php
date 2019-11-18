@@ -78,6 +78,11 @@ li.options{
         </form>
     </li>
 
+    <li class="options">
+        <form action="DeleteEmployee.php">
+            <input class="color" type="submit" value="Delete Employee" />
+        </form>
+    </li>  
 
     <li class="options">
         <form action="AddArtwork.php">
