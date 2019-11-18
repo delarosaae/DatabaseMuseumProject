@@ -1,6 +1,3 @@
-
-
-
 <html>
 <head>
 <style>
@@ -101,13 +98,13 @@ li a:hover {
 <br>
 <br>
 <div class="container">
-  <form action="AddArtistToDatabase.php">
+  <form action="AddArtistToDatabase.php" method="POST">
   <div class="row">
     <div class="col-25">
       <label input="firstname">First Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <input type="text" id="fname" name="firstname" placeholder="Artist First Name..">
     </div>
   </div>
 
@@ -116,30 +113,25 @@ li a:hover {
       <label for="lname">Last Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-25">
-      <label for="Nationality">Nationality</label>
-    </div>
-    <div class="col-75">
-      <select id="Nationality" name="Nationality">
-        <option value="australia">Australia</option>
-        <option value="canada">Canada</option>
-        <option value="usa">USA</option>
-        <option value="usa">Spain</option>
-      </select>
+      <input type="text" id="lname" name="lastname" placeholder="Artist Last Name..">
     </div>
   </div>
 
  <div class="row">
     <div class="col-25">
-      <label for="Speciality">Last Name</label>
+      <label for="nationality">Nationality</label>
     </div>
     <div class="col-75">
-      <input type="text" id="Speciality" name="Speciality" placeholder="Your last Speciality..">
+      <input type="text" id="nationality" name="nationality" placeholder="Artist Nationality..">
+    </div>
+  </div>
+
+ <div class="row">
+    <div class="col-25">
+      <label for="Speciality">Speciality</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="speciality" name="speciality" placeholder="Artist Speciality..">
     </div>
   </div>
 

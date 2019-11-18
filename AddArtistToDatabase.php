@@ -6,7 +6,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: white;
+  background-color: #333;
 }
 
 li {
@@ -15,14 +15,14 @@ li {
 
 li a {
   display: block;
-  color: red;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: black;
+  background-color: #111;
 }
 </style>
 <body>
@@ -50,13 +50,13 @@ $firstNameToAdd = stripslashes($firstNameToAdd);
 $lastNameToAdd = $_POST["lastname"];
 $lastNameToAdd = stripslashes($lastNameToAdd);
 
-$NationalityToAdd = $_POST["Nationality"];
+$NationalityToAdd = $_POST["nationality"];
 $NationalityToAdd = stripslashes($NationalityToAdd);
 
-$SpecialityToAdd = $_POST["Speciality"];
+$SpecialityToAdd = $_POST["speciality"];
 $SpecialityToAdd = stripslashes($pSpecialityToAdd);
 
-$insertArtist = "insert into Artist(last_name, first_name, phone_number, nationality, speciality) values ('$lastNameToAdd', '$firstNameToAdd', '$NationalityToAdd','$SpecialityToAdd')";
+$insertArtist = "insert into Artist(last_name, first_name, nationality, speciality) values ('$lastNameToAdd', '$firstNameToAdd', '$NationalityToAdd','$SpecialityToAdd')";
 
 if (mysqli_query($conn, $insertArtist))
 {
