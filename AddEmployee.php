@@ -93,6 +93,50 @@ input[type=submit]:hover {
     margin-top: 0px;    
 }
 
+ul.Nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: black;
+}
+
+button.color{
+    background-color: #260E46;
+    color: red;
+}
+
+input.color{
+    background-color: #260E46;
+    color: red;
+    margin-left: 10px;
+}
+
+li.options{
+    display: inline;
+}
+
+input.colorNoMargin{
+    background-color: #260E46;
+    color: red;
+}
+
 .navbar a:hover, .subnav:hover .subnavbtn {
   background-color: #c88f57;
 }
@@ -138,13 +182,14 @@ input[type=submit]:hover {
     </li>
 
     <li class="options">
-        <form action="AddHousekeeper.php">
+        <form action="AddSecurity.php">
             <input class="color" type="submit" value="Add Security" />
         </form>
     </li>
 
+
     <li class="options">
-        <form action="AddSecurity.php">
+        <form action="AddHousekeeper.php">
             <input class="color" type="submit" value="Add Housekeeper" />
         </form>
     </li>  
