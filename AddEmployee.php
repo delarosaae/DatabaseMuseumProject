@@ -111,7 +111,7 @@ input[type=submit]:hover {
 </div>
 
 <div>
-<a class="og" href="AddEmployee.php">Employee Login</a>
+<a class="og" href="AddEmployee.php">Add Employee</a>
 </div>
 
 <div>
