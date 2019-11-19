@@ -87,7 +87,7 @@ $NationalityToAdd = $_POST["nationality"];
 $NationalityToAdd = stripslashes($NationalityToAdd);
 
 $SpecialityToAdd = $_POST["speciality"];
-$SpecialityToAdd = stripslashes($pSpecialityToAdd);
+$SpecialityToAdd = stripslashes($SpecialityToAdd);
 
 $insertArtist = "insert into Artist(last_name, first_name, nationality, speciality) values ('$lastNameToAdd', '$firstNameToAdd', '$NationalityToAdd','$SpecialityToAdd')";
 
