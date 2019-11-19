@@ -31,7 +31,7 @@
 .logo {
     display: inline-block;
     vertical-align: top;
-    width: 100px;
+    width: 90px;
     height: 80px;
     margin-right: 20px;
     margin-left: 10px;
@@ -98,7 +98,7 @@
 </div>
 
 <div>
-<a class="og" href="AddEmployee.php">Employee Login</a>
+<a class="og" href="AddEmployee.php">Add Employee</a>
 </div>
 
 <div>
@@ -112,22 +112,9 @@
 
 </div>
 
-<br></br>
-
-
-
-<div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content"  method="POST">
-  <a id="wing_Name" href="#" value="selected">Eastern Art</a>
-  <a id="wing_Name" href="#" value="selected">American Art</a>
-  <a id="wing_Name" href="#" value="selected">European Art</a>
-  <a id="wing_Name" href="#" value="selected">African Art</a>
-  </div>
-</div>
-
-
-
+<br>
+  
+</br>
 
 
 <div class="container">
@@ -157,26 +144,22 @@ $dbname = "DatabaseProject";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
-$input = $_POST["wing_Name"];
-$input = stripslashes($firstNameToAdd);
-	
+$WingNameToAdd = $_POST["wing_Name"];
+$WingNameToAdd = stripslashes($WingNameToAdd);
 
 
+$sql = "call DatabaseProject.ArtinWing('$WingNameToAdd');";
 
-$sql = "Call ArtinWing(input)";
+//$result=mysqli_query($conn, $sql);
 
-if ($result = mysqli_query($conn, $sql)) {
-    while($row = mysqli_fetch_assoc($Title)) {
-        
-       echo "Title: " . $row["a.title"] ."<br>";
+if($result=mysqli_query($conn, $sql)){
 
-        echo "<br>";
-    }
-
-} else {
-    echo "0 results";
+  while ($row = mysqli_fetch_assoc($result)) {
+    echo "Title Id: " . $row['title'];
 }
 
+
+}
 
 mysqli_close($conn);
 
