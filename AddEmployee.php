@@ -130,42 +130,28 @@ input[type=submit]:hover {
 <br>
 
 
-<div class="container">
-  <form action="AddEmployeeToDatabase.php" method="POST">
-  <div class="row">
-    <div class="col-25">
-      <label input="firstname">First Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Employee First Name..">
-    </div>
-  </div>
+<ul>
+    <li class="options">
+        <form action="AddCurator.php">
+            <input class="color" type="submit" value="Add Curator" />
+        </form>
+    </li>
 
-  <div class="row">
-    <div class="col-25">
-      <label for="lname">Last Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Employee Last Name..">
-    </div>
-  </div>
+    <li class="options">
+        <form action="AddHousekeeper.php">
+            <input class="color" type="submit" value="Add Security" />
+        </form>
+    </li>
 
- <div class="row">
-    <div class="col-25">
-      <label for="PhoneNumber">PhoneNumber</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="PhoneNumber" name="phoneNumber" placeholder="Artist Phone Number..">
-    </div>
-  </div>
+    <li class="options">
+        <form action="AddSecurity.php">
+            <input class="color" type="submit" value="Add Housekeeper" />
+        </form>
+    </li>  
 
+ 
+</ul>
 
-  <div class="row">
-    <input type="submit" value="Submit">
-
-  </div>
-  </form>
-</div>
 
 
 </body>

@@ -88,7 +88,7 @@ $artistList = mysqli_query($conn, $viewArtist);
 if (mysqli_num_rows($artistList) > 0) {
     while($row = mysqli_fetch_assoc($artistList)) {
         
-       echo "Artist Id: " . $row["artistId"] ."<br>" . "last_name: " . $row["last_name"] ."<br>" . "First Name:  " . $row["first_name"] ."<br>". "Nationality:  ". $row["nationality"]. "<br>"."Specility: " . $row["specility"] ."<br>";
+       echo "Artist Id: " . $row["artistId"] ."<br>" . "last_name: " . $row["last_name"] ."<br>" . "First Name:  " . $row["first_name"] ."<br>". "Nationality:  ". $row["nationality"]. "<br>"."Specility: " . $row["speciality"] ."<br>";
 
         echo "<br>";
     }

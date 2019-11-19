@@ -1,6 +1,6 @@
 <html>
-<head>
-<style>
+<body>
+  <style>
 * {
   box-sizing: border-box;
 }
@@ -98,10 +98,8 @@ input[type=submit]:hover {
 }
 
 
-
-  
 </style>
-</head>
+
 <body>
 
 <div class="navbar">
@@ -113,7 +111,7 @@ input[type=submit]:hover {
 </div>
 
 <div>
-<a class="og" href="AddEmployee.php">Employee Login</a>
+<a class="og" href="AddEmployee.php">Add Employee</a>
 </div>
 
 <div>
@@ -127,16 +125,19 @@ input[type=submit]:hover {
 </div>
 
 
+
 <br>
 <br>
+
+
 <div class="container">
-  <form action="AddArtistToDatabase.php" method="POST">
+  <form action="AddCuratorToDatabase.php" method="POST">
   <div class="row">
     <div class="col-25">
       <label input="firstname">First Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Artist First Name..">
+      <input type="text" id="fname" name="firstname" placeholder="Employee First Name..">
     </div>
   </div>
 
@@ -145,25 +146,35 @@ input[type=submit]:hover {
       <label for="lname">Last Name</label>
     </div>
     <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Artist Last Name..">
+      <input type="text" id="lname" name="lastname" placeholder="Employee Last Name..">
     </div>
   </div>
 
  <div class="row">
     <div class="col-25">
-      <label for="nationality">Nationality</label>
+      <label for="PhoneNumber">PhoneNumber</label>
     </div>
     <div class="col-75">
-      <input type="text" id="nationality" name="nationality" placeholder="Artist Nationality..">
+      <input type="text" id="PhoneNumber" name="phoneNumber" placeholder="Artist Phone Number..">
     </div>
   </div>
 
- <div class="row">
+  <div class="row">
     <div class="col-25">
-      <label for="speciality">Speciality</label>
+      <label for="ssn">4 digits of SSN</label>
     </div>
     <div class="col-75">
-      <input type="text" id="speciality" name="speciality" placeholder="Artist Speciality..">
+      <input type="text" id="ssn" name="ssn" placeholder="SSN..">
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="salary">Salary</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="salary" name="salary" placeholder="salary..">
     </div>
   </div>
 
@@ -175,5 +186,6 @@ input[type=submit]:hover {
   </form>
 </div>
 
+
 </body>
-</html>
+</html> 
