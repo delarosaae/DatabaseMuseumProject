@@ -131,7 +131,13 @@ li.options{
         <form action="ViewEvents.php">
             <input class="color" type="submit" value="View Events" />
         </form>
-    </li>    
+    </li>  
+
+    <li class="options">
+        <form action="ArtinWIng.php">
+            <input class="color" type="submit" value="Art In Wing" />
+        </form>
+    </li>  
 </ul>
 
 

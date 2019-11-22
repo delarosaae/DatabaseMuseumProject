@@ -90,6 +90,7 @@ $artistIDADD = stripslashes($artistIDADD);
 
 $insertArtPiece = "insert into ArtPiece (artMedium, artistId, wingId, title) values ('$mediumToAdd', '$artistIDADD', '$Wing_IDToAdd', '$titleToAdd')";
 
+
 if (mysqli_query($conn, $insertArtPiece))
 {
     echo " has been added to the Art Database";

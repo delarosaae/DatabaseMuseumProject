@@ -136,7 +136,7 @@ input[type=submit]:hover {
       <label input="Title">Title</label>
     </div>
     <div class="col-75">
-      <input type="text" id="Title" name="Title" placeholder="Art Title..">
+      <input type="text" id="title" name="Title" placeholder="Art Title..">
     </div>
   </div>
 
@@ -145,7 +145,16 @@ input[type=submit]:hover {
       <label for="Medium">Medium</label>
     </div>
     <div class="col-75">
-      <input type="text" id="Medium" name="Medium" placeholder="Art Medium..">
+      <input type="text" id="med" name="Medium" placeholder="Art Medium..">
+    </div>
+  </div>
+
+    <div class="row">
+    <div class="col-25">
+      <label for="artistId">artistId</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="aID" name="artistId" placeholder="Artist ID..">
     </div>
   </div>
 
@@ -154,7 +163,7 @@ input[type=submit]:hover {
       <label for="Wing_ID">Wing ID</label>
     </div>
     <div class="col-75">
-      <input type="text" id="Wing_ID" name="Wing_ID" placeholder="Art Wing ID (1,2,3,4)..">
+      <input type="text" id="wingID" name="Wing_ID" placeholder="Art Wing ID (1,2,3,4)..">
     </div>
   </div>
 
