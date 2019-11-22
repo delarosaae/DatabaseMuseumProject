@@ -113,15 +113,15 @@ input[type=submit]:hover {
 </div>
 
 <div>
-<a class="og" href="AddEmployee.php">Employee Login</a>
+<a class="og" href="EmployeeScreen.php">Employee Screen</a>
 </div>
 
 <div>
-  <a class="og" href="#contact">View ArtWorks</a>
+  <a class="og" href="ViewArtworks.php">View ArtWorks</a>
 </div>
 
 <div>
-  <a class="og" href="#about">View Events</a>
+  <a class="og" href="ViewEvents.php">View Events</a>
 </div>
 
 </div>
@@ -157,6 +157,17 @@ input[type=submit]:hover {
       <input type="text" id="Wing_ID" name="Wing_ID" placeholder="Art Wing ID (1,2,3,4)..">
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="artistID">Artist ID</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="artistID" name="artistID" placeholder="Artist ID">
+    </div>
+  </div>
+
+  
 
 
 

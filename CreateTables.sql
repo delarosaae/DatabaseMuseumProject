@@ -55,7 +55,7 @@ create table ArtPiece(
 	artistId Integer(4) not null,
 	wingId Integer(2) not null,
     title varchar(30) not null,
-    primary key(artistId),
+    primary key(artId),
     foreign key(wingId) references Wing(wingId), 
 	foreign key(artistId) references Artist(artistId)
 );
@@ -105,3 +105,7 @@ insert into ArtPiece values(4, "The Walking Man", 4, 2, 'Bronze Sculpture');
 insert into Guest values(1, 'Smith', 'Joe', 'smith@email.com', 1);
 insert into Guest values(2, 'Jones', 'Bob', 'jones@email.com', 0);
 insert into Guest values(3, 'White', 'Bill', 'white@email.com', 0);
+
+create view getEmployees as 
+select last_name, first_name, phone_number
+from Employee;

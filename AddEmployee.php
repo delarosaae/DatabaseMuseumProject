@@ -155,15 +155,17 @@ input.colorNoMargin{
 </div>
 
 <div>
-<a class="og" href="AddEmployee.php">Add Employee</a>
+<a class="og" href="EmployeeScreen.php">Employee Screen</a>
 </div>
 
 <div>
-  <a class="og" href="#contact">View ArtWorks</a>
+  <a class="og" href="ViewArtworks.php">View ArtWorks</a>
 </div>
 
 <div>
-  <a class="og" href="#about">View Events</a>
+  <a class="og" href="ViewEvents.php">View Events</a>
+</div>
+
 </div>
 
 </div>

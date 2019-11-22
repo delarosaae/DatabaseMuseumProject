@@ -1,6 +1,6 @@
 <html>
-<head>
-<style>
+<body>
+  <style>
 * {
   box-sizing: border-box;
 }
@@ -93,15 +93,57 @@ input[type=submit]:hover {
     margin-top: 0px;    
 }
 
+ul.Nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: black;
+}
+
+button.color{
+    background-color: #260E46;
+    color: red;
+}
+
+input.color{
+    background-color: #260E46;
+    color: red;
+    margin-left: 10px;
+}
+
+li.options{
+    display: inline;
+}
+
+input.colorNoMargin{
+    background-color: #260E46;
+    color: red;
+}
+
 .navbar a:hover, .subnav:hover .subnavbtn {
   background-color: #c88f57;
 }
 
 
-
-  
 </style>
-</head>
+
 <body>
 
 <div class="navbar">
@@ -126,54 +168,38 @@ input[type=submit]:hover {
 
 </div>
 
-
-<br>
-<br>
-<div class="container">
-  <form action="AddArtistToDatabase.php" method="POST">
-  <div class="row">
-    <div class="col-25">
-      <label input="firstname">First Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Artist First Name..">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-25">
-      <label for="lname">Last Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Artist Last Name..">
-    </div>
-  </div>
-
- <div class="row">
-    <div class="col-25">
-      <label for="nationality">Nationality</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="nationality" name="nationality" placeholder="Artist Nationality..">
-    </div>
-  </div>
-
- <div class="row">
-    <div class="col-25">
-      <label for="speciality">Speciality</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="speciality" name="speciality" placeholder="Artist Speciality..">
-    </div>
-  </div>
-
-
-  <div class="row">
-    <input type="submit" value="Submit">
-
-  </div>
-  </form>
 </div>
 
+
+
+<br>
+<br>
+
+
+<ul>
+    <li class="options">
+        <form action="DeleteEmployeeCurator.php">
+            <input class="color" type="submit" value="Delete Curator" />
+        </form>
+    </li>
+
+    <li class="options">
+        <form action="DeleteEmployeeSecurity.php">
+            <input class="color" type="submit" value="Delete Security" />
+        </form>
+    </li>
+
+
+    <li class="options">
+        <form action="DeleteEmployeeHousekeeper.php">
+            <input class="color" type="submit" value="Delete Housekeeper" />
+        </form>
+    </li>  
+
+ 
+</ul>
+
+
+
 </body>
-</html>
+</html> 

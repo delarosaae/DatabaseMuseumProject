@@ -75,7 +75,6 @@ $password = "Museum508Database";
 $dbname = "DatabaseProject";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-echo($_POST["Title"]);
 
 $titleToAdd = $_POST["Title"];
 $titleToAdd = stripslashes($titleToAdd);
@@ -86,8 +85,10 @@ $mediumToAdd = stripslashes($mediumToAdd);
 $Wing_IDToAdd = $_POST["Wing_ID"];
 $Wing_IDToAdd = stripslashes($Wing_IDToAdd);
 
+$artistIDADD = $_POST["artistID"];
+$artistIDADD = stripslashes($artistIDADD);
 
-$insertArtPiece = "insert into ArtPiece(artId, artMedium, artistId, WingId, title) values (null, '$mediumToAdd', null, '$Wing_IDToAdd', '$Wing_ID')";
+$insertArtPiece = "insert into ArtPiece (artMedium, artistId, wingId, title) values ('$mediumToAdd', '$artistIDADD', '$Wing_IDToAdd', '$titleToAdd')";
 
 if (mysqli_query($conn, $insertArtPiece))
 {
