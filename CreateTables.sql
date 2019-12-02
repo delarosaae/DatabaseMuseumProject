@@ -106,4 +106,12 @@ insert into Guest values(1, 'Smith', 'Joe', 'smith@email.com', 1);
 insert into Guest values(2, 'Jones', 'Bob', 'jones@email.com', 0);
 insert into Guest values(3, 'White', 'Bill', 'white@email.com', 0);
 
+create table Works(
+empId int(3),
+eventId int(3),
+primary key (empId, eventId), 
+foreign key(empId) references Employee(empId),
+foreign key(eventId) references Event(eventId)
+)
+
 --create view getEmployees as select last_name, first_name, phone_number from Employee;

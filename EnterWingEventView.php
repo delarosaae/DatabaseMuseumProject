@@ -1,7 +1,6 @@
 <html>
-<body>
+<head>
 <style>
-
 * {
   box-sizing: border-box;
 }
@@ -94,55 +93,13 @@ input[type=submit]:hover {
     margin-top: 0px;    
 }
 
-ul.Nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: white;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: red;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: black;
-}
-
-button.color{
-    background-color: #260E46;
-    color: red;
-}
-
-input.color{
-    background-color: #260E46;
-    color: red;
-    margin-left: 10px;
-}
-
-li.options{
-    display: inline;
-}
-
-input.colorNoMargin{
-    background-color: #260E46;
-    color: red;
-}
-
 .navbar a:hover, .subnav:hover .subnavbtn {
   background-color: #c88f57;
 }
 
 
+
+  
 </style>
 </head>
 <body>
@@ -156,58 +113,39 @@ input.colorNoMargin{
 </div>
 
 <div>
-<a class="og" href="AddEmployee.php">Add Employee</a>
+<a class="og" href="EmployeeScreen.php">Employee Screen</a>
 </div>
 
 <div>
-  <a class="og" href="#contact">View ArtWorks</a>
+  <a class="og" href="ViewArtworks.php">View ArtWorks</a>
 </div>
 
 <div>
-  <a class="og" href="#about">View Events</a>
+  <a class="og" href="ViewEvents.php">View Events</a>
 </div>
 
-
 </div>
+
 
 <br>
-  
-</br>
+<br>
+<div class="container">
+  <form action="ViewWingEvents.php" method="POST">
+  <div class="row">
+    <div class="col-25">
+      <label input="wingId">Enter Wing ID to view Events</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="wingId" name="wingId" placeholder="Wing ID..">
+    </div>
+  </div>
+  <br></br>
+  <div class="row">
+    <input type="submit" value="Submit">
 
+  </div>
+  </form>
+</div>
 
-
-<?php
- 
-$servername = "104.155.156.117";
-$username = "root";
-$password = "Museum508Database";
-$dbname = "DatabaseProject";
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-
-$ViewSpace = "SELECT *, `total_works_space`-`works_displayed` AS `difference` 
-FROM `Wing`";
-
-$ListSpace = mysqli_query($conn, $ViewSpace);
-
-
-if (mysqli_num_rows($ListSpace) > 0) {
-    while($row = mysqli_fetch_assoc($ListSpace)) {
-        
-       echo "Wing: " . $row["wing_Name"] ."<br>"."How Many more works can be added to wing : " . $row["difference"] ."<br>";
-
-        echo "<br>";
-    }
-
-} else {
-    echo "0 results";
-}
-
-
-mysqli_close($conn);
-
-
-?>
 </body>
-
-</html> 
+</html>

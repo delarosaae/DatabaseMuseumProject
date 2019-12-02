@@ -134,6 +134,12 @@ li.options{
     </li>  
 
     <li class="options">
+        <form action="DeleteEvent.php">
+            <input class="color" type="submit" value="Delete Event" />
+        </form>
+    </li>
+
+    <li class="options">
         <form action="ArtinWIng.php">
             <input class="color" type="submit" value="Art In Wing" />
         </form>
@@ -151,6 +157,14 @@ li.options{
             <input class="color" type="submit" value="Space in Wing" />
         </form>
     </li>  
+
+    <li class="options">
+        <form action="EnterWingEventView.php">
+            <input class="color" type="submit" value="Look Up Events for Each Wing" />
+        </form>
+    </li>  
+ 
+    
 
 </ul>
 

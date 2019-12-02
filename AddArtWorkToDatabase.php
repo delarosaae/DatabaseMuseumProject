@@ -85,19 +85,13 @@ $mediumToAdd = stripslashes($mediumToAdd);
 $Wing_IDToAdd = $_POST["Wing_ID"];
 $Wing_IDToAdd = stripslashes($Wing_IDToAdd);
 
-<<<<<<< HEAD
 $artistIdToAdd = $_POST["artistId"];
 $artistIdToAdd = stripslashes($artistIdToAdd);
 
 
 $insertArtPiece = "insert into ArtPiece(artMedium, artistId, WingId, title) values ('$mediumToAdd', '$artistIdToAdd', '$Wing_IDToAdd', '$titleToAdd')";
 
-=======
-$artistIDADD = $_POST["artistID"];
-$artistIDADD = stripslashes($artistIDADD);
->>>>>>> 4d0c8ba5da56564101b67f9eaa337d70c4f21494
 
-$insertArtPiece = "insert into ArtPiece (artMedium, artistId, wingId, title) values ('$mediumToAdd', '$artistIDADD', '$Wing_IDToAdd', '$titleToAdd')";
 
 
 if (mysqli_query($conn, $insertArtPiece))

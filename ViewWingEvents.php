@@ -1,7 +1,6 @@
 <html>
 <body>
 <style>
-
 .navbar {
   overflow: hidden;
   background-color: #000000;
@@ -42,10 +41,7 @@
   background-color: #c88f57;
 }
 
-
-
 </style>
-</head>
 <body>
 
 <div class="navbar">
@@ -57,21 +53,19 @@
 </div>
 
 <div>
-<a class="og" href="EmployeeScreen.php">Employee Screen</a>
+<a class="og" href="AddEmployee.php">Employee Login</a>
 </div>
 
 <div>
-  <a class="og" href="ViewArtworks.php">View ArtWorks</a>
+  <a class="og" href="#contact">View ArtWorks</a>
 </div>
 
 <div>
-  <a class="og" href="ViewEvents.php">View Events</a>
+  <a class="og" href="#about">View Events</a>
 </div>
 
-
 </div>
 
-<br></br>
 
 <?php
  
@@ -80,37 +74,27 @@ $username = "root";
 $password = "Museum508Database";
 $dbname = "DatabaseProject";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-	
-$viewEvents = "Select * from Event";
-$eventList = mysqli_query($conn, $viewEvents);
 
 
-if (mysqli_num_rows($eventList) > 0) {
-    while($row = mysqli_fetch_assoc($eventList)) {
-        
-       echo "Event Name: " . $row["event_Title"] ."<br>" . "Wing Location: " . $row["wingId"] ."<br>" . "Event ID: " . $row["eventId"] ."<br>" ;
-        if($row["public"] == 0)
-        {
-            echo "Public: Yes";
-        }
-        else{
-            echo "Public: No";
-        }
+$wingToAdd = $_POST["wingId"];
+$wingToAdd = stripslashes($wingToAdd);
+
+
+$viewEventsInWing = "Select event_Title from Event where wingId = '$wingToAdd'";
+$wingEventList = mysqli_query($conn, $viewEventsInWing);
+
+
+if (mysqli_num_rows($wingEventList) > 0) {
+    while($row = mysqli_fetch_assoc($wingEventList)) {
+        echo "Event Title: " . $row["event_Title"] ."<br>";
         echo "<br>";
-        echo "<br>";
-
-
     }
-
 } else {
     echo "0 results";
 }
 
 
-mysqli_close($conn);
-
-
 ?>
-</body>
 
+</body>
 </html> 

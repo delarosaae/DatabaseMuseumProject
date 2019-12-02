@@ -1,7 +1,6 @@
 <html>
 <body>
 <style>
-
 .navbar {
   overflow: hidden;
   background-color: #000000;
@@ -42,10 +41,7 @@
   background-color: #c88f57;
 }
 
-
-
 </style>
-</head>
 <body>
 
 <div class="navbar">
@@ -68,10 +64,8 @@
   <a class="og" href="ViewEvents.php">View Events</a>
 </div>
 
-
 </div>
 
-<br></br>
 
 <?php
  
@@ -80,37 +74,21 @@ $username = "root";
 $password = "Museum508Database";
 $dbname = "DatabaseProject";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-	
-$viewEvents = "Select * from Event";
-$eventList = mysqli_query($conn, $viewEvents);
+
+$deleteEvent = $_POST["eventId"];
+$deleteEvent = stripslashes($deleteEvent);
 
 
-if (mysqli_num_rows($eventList) > 0) {
-    while($row = mysqli_fetch_assoc($eventList)) {
-        
-       echo "Event Name: " . $row["event_Title"] ."<br>" . "Wing Location: " . $row["wingId"] ."<br>" . "Event ID: " . $row["eventId"] ."<br>" ;
-        if($row["public"] == 0)
-        {
-            echo "Public: Yes";
-        }
-        else{
-            echo "Public: No";
-        }
-        echo "<br>";
-        echo "<br>";
+$deleteEventQuery = "delete from Event where eventId = '$deleteEvent'";
 
-
-    }
-
+if (mysqli_query($conn, $deleteEventQuery)) {
+    echo "deleted from Event record\n";
 } else {
-    echo "0 results";
+    echo "Error deleting event: " . mysqli_error($conn);
 }
 
 
-mysqli_close($conn);
-
-
 ?>
-</body>
 
+</body>
 </html> 

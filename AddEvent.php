@@ -132,31 +132,31 @@ input[type=submit]:hover {
 
 
 <div class="container">
-  <form action="AddCuratorToDatabase.php" method="POST">
+  <form action="AddEventToDatabase.php" method="POST">
   <div class="row">
     <div class="col-25">
-      <label input="firstname">First Name</label>
+      <label input="eventTitle">Event Title</label>
     </div>
     <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Employee First Name..">
+      <input type="text" id="eventTitle" name="eventTitle" placeholder="Event Title..">
     </div>
   </div>
 
   <div class="row">
     <div class="col-25">
-      <label for="lname">Last Name</label>
+      <label for="wingId">Wing</label>
     </div>
     <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Employee Last Name..">
+      <input type="text" id="wingId" name="wingId" placeholder="Wing..">
     </div>
   </div>
 
  <div class="row">
     <div class="col-25">
-      <label for="PhoneNumber">PhoneNumber</label>
+      <label for="public">Public</label>
     </div>
     <div class="col-75">
-      <input type="text" id="PhoneNumber" name="phoneNumber" placeholder="Artist Phone Number..">
+      <input type="text" id="public" name="public" placeholder="Public..">
     </div>
   </div>
 
