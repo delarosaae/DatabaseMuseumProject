@@ -152,6 +152,12 @@ li.options{
         </form>
     </li>  
 
+    <li class="options">
+        <form action="WorksOnEvent.php">
+            <input class="color" type="submit" value="Event Host" />
+        </form>
+    </li>  
+
 </ul>
 
 
