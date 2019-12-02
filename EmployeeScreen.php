@@ -169,7 +169,33 @@ li.options{
         <form action="WorksOnEvent.php">
             <input class="color" type="submit" value="Event Host" />
         </form>
-    </li>  
+    </li> 
+
+    <li class="options">
+        <form action="Security.php">
+            <input class="color" type="submit" value="Security" />
+        </form>
+    </li> 
+
+    <li class="options">
+        <form action="supervisor.php">
+            <input class="color" type="submit" value="Curator Supervisor" />
+        </form>
+    </li> 
+
+    <li class="options">
+        <form action="housekeeper.php">
+            <input class="color" type="submit" value="Housekeeper" />
+        </form>
+    </li> 
+
+    <li class="options">
+        <form action="attending.php">
+            <input class="color" type="submit" value="Guest Attending Event" />
+        </form>
+    </li> 
+
+
 
 </ul>
 
