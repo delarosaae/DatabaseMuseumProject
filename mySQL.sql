@@ -10,60 +10,85 @@ where a.wingId = w.wingId and w.wing_Name=input;
 END
 
 
+#Add Artist to Database
+
+insert into Artist(last_name, first_name, nationality, speciality) values ('$lastNameToAdd', '$firstNameToAdd', '$NationalityToAdd','$SpecialityToAdd')
 
 
-#These are query 10 to 20
+#Add Art work to the database
+insert into ArtPiece(artMedium, artistId, WingId, title) values ('$mediumToAdd', '$artistIdToAdd', '$Wing_IDToAdd', '$titleToAdd')
 
-#10.
-SELECT CONCAT(firstName, ' ', lastName) AS 'NAME' FROM artist;
+#Add Curator to the database
+insert into Curator values ('$employeeIDResultNumber', '$salaryToAdd', '$wingToAdd')
 
-#11.
-SELECT count(*) AS 'Total Works' FROM artPiece;
-
-#12.
-SELECT * FROM event WHERE date >= SYSDATE();
-
-#13.
-
-#mysql> CREATE TABLE works(
-#    -> entryID INT(6) PRIMARY KEY,
-#    -> eventID INT(6),
-#    -> empID INT(6)
-#   -> );
-#
-#	How i created the works table, for reference.
-
-SELECT wing FROM event WHERE eventId = X;
+#Add employee to an event
+insert into Works values ('$empToAdd', '$eventId')
 
 
-#	X here is just an example and can be generalized.
+#Add employee to database
+insert into Employee (last_name, first_name, phone_number) values ('$lastNameToAdd', '$firstNameToAdd', '$phoneNumberToAdd')
 
+#Add event to database
+insert into Event(event_Title, wingId, public) values ('$eventTitleToAdd', '$wingToAdd', '$publicToAdd')
 
-#14.
-SELECT empID FROM works WHERE eventID = X;
+#Add housekeeper to database
+insert into Employee (last_name, first_name, phone_number, SSN) values ('$lastNameToAdd', '$firstNameToAdd', '$phoneNumberToAdd', '$snnToAdd')
 
+select empId from Employee where SSN = '$snnToAdd'
 
-#15.
-#I dont think this query is possible given the current database design
+insert into HouseKepper values ('$employeeIDResultNumber', '$wageToAdd)
 
-#16.
-SELECT empID FROM supervises WHERE wingID = X;
+#Add security to database
 
-#17.
-SELECT * FROM supervises;
+insert into Employee (last_name, first_name, phone_number, SSN) values ('$lastNameToAdd', '$firstNameToAdd', '$phoneNumberToAdd', '$snnToAdd')
 
-#18.
-SELECT * FROM attends WHERE eventID = X;
+select empId from Employee where SSN = '$snnToAdd'
 
-#19.
-#How many housekeepers are currently working?
-SELECT COUNT(*) FROM housekeeper;
-#Information about housekeepers? 
-SELECT * FROM housekeepers;
-#Information about a specific housekeeper?
-SELECT X FROM housekeepers WHERE A = B;
+insert into Security values ('$employeeIDResultNumber', '$salaryToAdd', '$shiftToAdd')
 
-#20.
-SELECT * FROM security WHERE shift = 'night';
-#OR
-SELECT * FROM security WHERE shift = 'day';
+#To look at art in wing
+#Calls the proc name ArtinWing
+
+call DatabaseProject.ArtinWing('$WingNameToAdd');
+
+#To look at people attending a event
+Select * from attends
+
+#Check log in
+select empId, last_name from Employee where empId = '$employee' and last_name = '$lastName'
+
+#Delete Artist
+delete from Artist where empId = '$deleteArtist'
+
+#Delete Art pieces
+delete from ArtPiece where empId = '$deleteArtPiece'
+
+#Delete Curator
+delete from Curator where empId = '$employeeIdDelete'
+delete from Employee where empId = '$employeeIdDelete'
+
+#Delete event
+delete from Event where eventId = '$deleteEvent'
+
+#Delete housekeeper 
+delete from Housekeeper where empId = '$employeeIdDelete'
+delete from Employee where empId = '$employeeIdDelete'
+
+#Delete security 
+delete from Security where empId = '$employeeIdDelete'
+delete from Employee where empId = '$employeeIdDelete'
+
+#housekeeper working
+Select * from Housekeeper
+Select COUNT(*) from Housekeeper
+
+#security working on each shift
+Select * from Security WHERE shift = 'Night'
+Select * from Security WHERE shift = 'Day'
+
+#Space in a wing
+SELECT *, `total_works_space`-`works_displayed` AS `difference` 
+FROM `Wing`
+
+#supervisor
+Select * from Curator
