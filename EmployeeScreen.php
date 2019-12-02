@@ -143,7 +143,15 @@ li.options{
         <form action="AddEmployeeEvent.php">
             <input class="color" type="submit" value="Add Employee To Work Event" />
         </form>
+        
     </li>  
+
+    <li class="options">
+        <form action="SpaceInWing.php">
+            <input class="color" type="submit" value="Space in Wing" />
+        </form>
+    </li>  
+
 </ul>
 
 
