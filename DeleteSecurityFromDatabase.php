@@ -75,30 +75,26 @@ $password = "Museum508Database";
 $dbname = "DatabaseProject";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-echo($_POST["firstname"]);
+$employeeIdDelete = $_POST["Employed_ID"];
+$employeeIdDelete = stripslashes($employeeIdDelete);
 
-$firstNameToAdd = $_POST["firstname"];
-$firstNameToAdd = stripslashes($firstNameToAdd);
+//echo "employee ID delete: ". $employeeIdDelete;
 
-$lastNameToAdd = $_POST["lastname"];
-$lastNameToAdd = stripslashes($lastNameToAdd);
 
-$NationalityToAdd = $_POST["nationality"];
-$NationalityToAdd = stripslashes($NationalityToAdd);
+//Running into constraints, Make delete employee delete curator/housekeeper/security first then inside if delete it from the employee table
+$deleteQueryCurator = "delete from Security where empId = '$employeeIdDelete'";
+$deleteQueryEmployee = "delete from Employee where empId = '$employeeIdDelete'";
 
-$SpecialityToAdd = $_POST["speciality"];
-$SpecialityToAdd = stripslashes($SpecialityToAdd);
-
-$insertArtist = "insert into Artist(last_name, first_name, nationality, speciality) values ('$lastNameToAdd', '$firstNameToAdd', '$NationalityToAdd','$SpecialityToAdd')";
-
-if (mysqli_query($conn, $insertArtist))
-{
-    echo " has been added to the Artist Database";
+if (mysqli_query($conn, $deleteQueryCurator)) {
+    echo "deleted from Security\n";
+    if (mysqli_query($conn, $deleteQueryEmployee)) {
+        echo "deleted from employee";
+    } else {
+        echo "Error deleting record: " . mysqli_error($conn);
+    }
+} else {
+    echo "Error deleting record: " . mysqli_error($conn);
 }
-else{
-    echo " could not be add to the Artist database";
-}
-mysqli_close($conn);
 
 
 ?>

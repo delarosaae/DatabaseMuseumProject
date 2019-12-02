@@ -113,15 +113,15 @@ input[type=submit]:hover {
 </div>
 
 <div>
-<a class="og" href="AddEmployee.php">Employee Login</a>
+<a class="og" href="EmployeeScreen.php">Employee Screen</a>
 </div>
 
 <div>
-  <a class="og" href="#contact">View ArtWorks</a>
+  <a class="og" href="ViewArtworks.php">View ArtWorks</a>
 </div>
 
 <div>
-  <a class="og" href="#about">View Events</a>
+  <a class="og" href="ViewEvents.php">View Events</a>
 </div>
 
 </div>
@@ -130,13 +130,13 @@ input[type=submit]:hover {
 <br>
 <br>
 <div class="container">
-  <form action="DeleteEmployeeFromDatabase.php" method="POST">
+  <form action="DeleteArtPieceFromDatabase.php" method="POST">
   <div class="row">
     <div class="col-25">
-      <label input="Employed_ID">Employee ID to delete</label>
+      <label input="artPiece">Enter Art Piece ID to delete</label>
     </div>
     <div class="col-75">
-      <input type="text" id="eID" name="Employed_ID" placeholder="Employee ID..">
+      <input type="text" id="artPiece" name="artPiece" placeholder="Art Piece ID..">
     </div>
   </div>
   <br></br>

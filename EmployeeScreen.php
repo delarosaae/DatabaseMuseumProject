@@ -59,8 +59,9 @@ li.options{
 <ul class="Nav">
   <li><a href="MuseumMainPage.php">Home</a></li>
   <li><a href="AddEmployee.php">Employee Login</a></li>
-  <li><a href="#contact">View ArtWorks</a></li>
-  <li><a href="#about">View Events</a></li>
+  <li><a href="ViewArtworks.php">View ArtWorks</a></li>
+  <li><a href="ViewEvents.php">View Events</a></li>
+  <li><a href="EmployeeScreen.php">Employee Screen</a></li>
 </ul>
 
 <br></br>
@@ -79,7 +80,7 @@ li.options{
     </li>
 
     <li class="options">
-        <form action="DeleteEmployee.php">
+        <form action="DeleteEmployeeChoice.php">
             <input class="color" type="submit" value="Delete Employee" />
         </form>
     </li>  
@@ -97,6 +98,12 @@ li.options{
     </li>
 
     <li class="options">
+        <form action="DeleteArtPiece.php">
+            <input class="color" type="submit" value="Delete Art Works" />
+        </form>
+    </li>
+
+    <li class="options">
         <form action="AddArtist.php">
             <input class="color" type="submit" value="Add Artist" />
         </form>
@@ -109,14 +116,20 @@ li.options{
     </li>
 
     <li class="options">
+        <form action="DeleteArtist.php">
+            <input class="color" type="submit" value="Delete Artist" />
+        </form>
+    </li>
+
+    <li class="options">
         <form action="AddEvent.php">
-            <input class="color" type="submit" value="View Employees" />
+            <input class="color" type="submit" value="Add Events" />
         </form>
     </li>
 
     <li class="options">
         <form action="ViewEvents.php">
-            <input class="color" type="submit" value="View Employees" />
+            <input class="color" type="submit" value="View Events" />
         </form>
     </li>  
 

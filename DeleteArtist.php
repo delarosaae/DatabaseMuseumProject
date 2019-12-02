@@ -130,44 +130,16 @@ input[type=submit]:hover {
 <br>
 <br>
 <div class="container">
-  <form action="AddArtistToDatabase.php" method="POST">
+  <form action="DeleteArtistFromDatabase.php" method="POST">
   <div class="row">
     <div class="col-25">
-      <label input="firstname">First Name</label>
+      <label input="artistID">Enter Artist ID to delete</label>
     </div>
     <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Artist First Name..">
+      <input type="text" id="artistID" name="artistID" placeholder="Artist ID..">
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-25">
-      <label for="lname">Last Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Artist Last Name..">
-    </div>
-  </div>
-
- <div class="row">
-    <div class="col-25">
-      <label for="nationality">Nationality</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="nationality" name="nationality" placeholder="Artist Nationality..">
-    </div>
-  </div>
-
- <div class="row">
-    <div class="col-25">
-      <label for="speciality">Speciality</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="speciality" name="speciality" placeholder="Artist Speciality..">
-    </div>
-  </div>
-
-
+  <br></br>
   <div class="row">
     <input type="submit" value="Submit">
 

@@ -53,15 +53,15 @@
 </div>
 
 <div>
-<a class="og" href="AddEmployee.php">Employee Login</a>
+<a class="og" href="EmployeeScreen.php">Employee Screen</a>
 </div>
 
 <div>
-  <a class="og" href="#contact">View ArtWorks</a>
+  <a class="og" href="ViewArtworks.php">View ArtWorks</a>
 </div>
 
 <div>
-  <a class="og" href="#about">View Events</a>
+  <a class="og" href="ViewEvents.php">View Events</a>
 </div>
 
 </div>
@@ -75,25 +75,19 @@ $password = "Museum508Database";
 $dbname = "DatabaseProject";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$employeeIdDelete = $_POST["Employed_ID"];
-$employeeIdDelete = stripslashes($employeeIdDelete);
+$deleteArtPiece = $_POST["artPiece"];
+$deleteArtPiece = stripslashes($deleteArtPiece);
 
 //echo "employee ID delete: ". $employeeIdDelete;
 
 
 //Running into constraints, Make delete employee delete curator/housekeeper/security first then inside if delete it from the employee table
-$deleteQueryCurator = "delete from Curator where empId = '$employeeIdDelete'";
-$deleteQueryEmployee = "delete from Employee where empId = '$employeeIdDelete'";
+$deleteArtPieceQuery = "delete from ArtPiece where empId = '$deleteArtPiece'";
 
-if (mysqli_query($conn, $deleteQueryCurator)) {
-    echo "deleted from Curator\n";
-    if (mysqli_query($conn, $deleteQueryEmployee)) {
-        echo "deleted from employee";
-    } else {
-        echo "Error deleting record: " . mysqli_error($conn);
-    }
+if (mysqli_query($conn, $deleteArtPieceQuery)) {
+    echo "deleted from Art Piece record\n";
 } else {
-    echo "Error deleting record: " . mysqli_error($conn);
+    echo "Error deleting art piece: " . mysqli_error($conn);
 }
 
 
