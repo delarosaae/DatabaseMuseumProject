@@ -1,5 +1,18 @@
-#Queries 10+ 
-#mySQL
+#All the Queries are embedded inside PHP files 
+
+
+
+#Stored Proc for Art In each Wing
+CREATE DEFINER=`root`@`%` PROCEDURE `ArtinWing`(in input varchar(20))
+BEGIN
+SELECT a.title FROM DatabaseProject.ArtPiece as a,DatabaseProject.Wing as w
+where a.wingId = w.wingId and w.wing_Name=input;
+END
+
+
+
+
+#These are query 10 to 20
 
 #10.
 SELECT CONCAT(firstName, ' ', lastName) AS 'NAME' FROM artist;
