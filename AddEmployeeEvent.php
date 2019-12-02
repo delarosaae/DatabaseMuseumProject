@@ -132,59 +132,22 @@ input[type=submit]:hover {
 
 
 <div class="container">
-  <form action="AddCuratorToDatabase.php" method="POST">
+  <form action="AddEmployeeEventDatabase.php" method="POST">
   <div class="row">
     <div class="col-25">
-      <label input="firstname">First Name</label>
+      <label input="firstname">Employee ID</label>
     </div>
     <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Employee First Name..">
+      <input type="text" id="empId" name="empId" placeholder="Employee ID..">
     </div>
   </div>
 
   <div class="row">
     <div class="col-25">
-      <label for="lname">Last Name</label>
+      <label for="lname">Event ID</label>
     </div>
     <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Employee Last Name..">
-    </div>
-  </div>
-
- <div class="row">
-    <div class="col-25">
-      <label for="PhoneNumber">PhoneNumber</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="PhoneNumber" name="phoneNumber" placeholder="Artist Phone Number..">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-25">
-      <label for="ssn">4 digits of SSN</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="ssn" name="ssn" placeholder="SSN..">
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-25">
-      <label for="salary">Salary</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="salary" name="salary" placeholder="salary..">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-25">
-      <label for="workingWing">Wing to work in</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="workingWing" name="workingWing" placeholder="Wing..">
+      <input type="text" id="eventId" name="eventId" placeholder="Employee ID..">
     </div>
   </div>
 

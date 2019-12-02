@@ -138,6 +138,12 @@ li.options{
             <input class="color" type="submit" value="Art In Wing" />
         </form>
     </li>  
+
+    <li class="options">
+        <form action="AddEmployeeEvent.php">
+            <input class="color" type="submit" value="Add Employee To Work Event" />
+        </form>
+    </li>  
 </ul>
 
 

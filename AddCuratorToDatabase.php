@@ -92,6 +92,9 @@ $snnToAdd = stripslashes($snnToAdd);
 $salaryToAdd = $_POST["salary"];
 $salaryToAdd = stripslashes($salaryToAdd);
 
+$wingToAdd = $_POST["workingWing"];
+$wingToAdd = stripslashes($wingToAdd);
+
 $insertEmployee = "insert into Employee (last_name, first_name, phone_number, SSN) values ('$lastNameToAdd', '$firstNameToAdd', '$phoneNumberToAdd', '$snnToAdd')";
 
 if (mysqli_query($conn, $insertEmployee))
@@ -119,7 +122,7 @@ if(mysqli_num_rows($employeeIDResult) > 0){
 echo "$employeeIDResultNumber". "second time \n";
 
 
-$insertCurator = "insert into Curator values ('$employeeIDResultNumber', '$salaryToAdd')";
+$insertCurator = "insert into Curator values ('$employeeIDResultNumber', '$salaryToAdd', '$wingToAdd')";
 
 if (mysqli_query($conn, $insertCurator))
 {

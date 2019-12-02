@@ -1,7 +1,6 @@
 <html>
 <body>
 <style>
-
 .navbar {
   overflow: hidden;
   background-color: #000000;
@@ -41,11 +40,7 @@
 .navbar a:hover, .subnav:hover .subnavbtn {
   background-color: #c88f57;
 }
-
-
-
 </style>
-</head>
 <body>
 
 <div class="navbar">
@@ -68,10 +63,7 @@
   <a class="og" href="ViewEvents.php">View Events</a>
 </div>
 
-
 </div>
-
-<br></br>
 
 <?php
  
@@ -80,37 +72,30 @@ $username = "root";
 $password = "Museum508Database";
 $dbname = "DatabaseProject";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-	
-$viewEvents = "Select * from Event";
-$eventList = mysqli_query($conn, $viewEvents);
 
 
-if (mysqli_num_rows($eventList) > 0) {
-    while($row = mysqli_fetch_assoc($eventList)) {
-        
-       echo "Event Name: " . $row["event_Title"] ."<br>" . "Wing Location: " . $row["wingId"] ."<br>";
-        if($row["public"] == 0)
-        {
-            echo "Public: Yes";
-        }
-        else{
-            echo "Public: No";
-        }
-        echo "<br>";
-        echo "<br>";
+$empToAdd = $_POST["empId"];
+$empToAdd = stripslashes($empToAdd);
+
+$eventId = $_POST["eventId"];
+$eventId = stripslashes($eventId);
 
 
-    }
 
-} else {
-    echo "0 results";
+
+$insertWorks = "insert into Works values ('$empToAdd', '$eventId')";
+
+if (mysqli_query($conn, $insertWorks))
+{
+    echo " Added Employee and Event to Works Table ";
 }
-
-
+else{
+    echo " could not add employee and event to database";
+}
 mysqli_close($conn);
 
 
 ?>
-</body>
 
+</body>
 </html> 

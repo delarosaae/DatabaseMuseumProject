@@ -189,14 +189,11 @@ input.colorNoMargin{
         </form>
     </li>
 
-
     <li class="options">
         <form action="DeleteEmployeeHousekeeper.php">
             <input class="color" type="submit" value="Delete Housekeeper" />
         </form>
-    </li>  
-
- 
+    </li>   
 </ul>
 
 

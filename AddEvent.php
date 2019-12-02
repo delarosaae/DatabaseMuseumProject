@@ -160,34 +160,6 @@ input[type=submit]:hover {
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-25">
-      <label for="ssn">4 digits of SSN</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="ssn" name="ssn" placeholder="SSN..">
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-25">
-      <label for="salary">Salary</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="salary" name="salary" placeholder="salary..">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-25">
-      <label for="workingWing">Wing to work in</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="workingWing" name="workingWing" placeholder="Wing..">
-    </div>
-  </div>
-
 
   <div class="row">
     <input type="submit" value="Submit">
