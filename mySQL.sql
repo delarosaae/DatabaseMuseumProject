@@ -92,3 +92,22 @@ FROM `Wing`
 
 #supervisor
 Select * from Curator
+
+#View Artists
+"Select * from Artist"
+
+#View Art Works
+Select * from ArtPiece
+
+#View employees
+Select * from getEmployees
+
+#view events
+Select * from Event
+
+#view Events for each wing
+Select event_Title from Event where wingId = '$wingToAdd'
+
+# Number of works in the event
+SELECT * FROM DatabaseProject.Works as w, DatabaseProject.Employee as e, DatabaseProject.Event as v
+where w.empId = e.empId and w.eventId = v.eventId;
