@@ -125,6 +125,13 @@ li.options{
             <input class="color" type="submit" value="Art In Wing" />
         </form>
     </li>  
+
+    <li class="options">
+        <form action="SpaceInWing.php">
+            <input class="color" type="submit" value="Space in Wing" />
+        </form>
+    </li>  
+
 </ul>
 
 

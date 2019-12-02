@@ -175,26 +175,6 @@ input.colorNoMargin{
 </br>
 
 
-<div class="container">
-  <form method="POST">
-  <div class="row">
-    <div class="col-25">
-      <label input="wing_Name" style="font-weight: bold;">Wing Name</label>
-
-    </div>
-
-    <div class="col-25">
-      <input type="text" id="fname" name="wing_Name" placeholder="wing Name..">
-    </div>
-  </div>
-
-  <div class="row">
-    <input type="submit" value="Submit">
-
-  </div>
-
-  </form>
-</div>
 
 <?php
  
@@ -205,24 +185,24 @@ $dbname = "DatabaseProject";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
-$WingNameToAdd = $_POST["wing_Name"];
-$WingNameToAdd = stripslashes($WingNameToAdd);
+$ViewSpace = "SELECT *, `total_works_space`-`works_displayed` AS `difference` 
+FROM `Wing`";
+
+$ListSpace = mysqli_query($conn, $ViewSpace);
 
 
-$sql = "call DatabaseProject.ArtinWing('$WingNameToAdd');";
+if (mysqli_num_rows($ListSpace) > 0) {
+    while($row = mysqli_fetch_assoc($ListSpace)) {
+        
+       echo "Wing: " . $row["wing_Name"] ."<br>"."Space: " . $row["difference"] ."<br>";
 
-//$result=mysqli_query($conn, $sql);
+        echo "<br>";
+    }
 
-if($result=mysqli_query($conn, $sql)){
-
-  while ($row = mysqli_fetch_assoc($result)) {
-    echo "Title Id: " . $row['title'];
-    echo "<br>";
-    echo "<br>";
+} else {
+    echo "0 results";
 }
 
-
-}
 
 mysqli_close($conn);
 

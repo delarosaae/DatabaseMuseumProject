@@ -90,7 +90,7 @@ $artistIdToAdd = $_POST["artistId"];
 $artistIdToAdd = stripslashes($artistIdToAdd);
 
 
-$insertArtPiece = "INSERT INTO ArtPiece(artMedium, artistId, WingId, title) values ($mediumToAdd', '$artistIdToAdd', '$Wing_IDToAdd', '$Wing_ID')";
+$insertArtPiece = "insert into ArtPiece(artMedium, artistId, WingId, title) values ('$mediumToAdd', '$artistIdToAdd', '$Wing_IDToAdd', '$titleToAdd')";
 
 
 
